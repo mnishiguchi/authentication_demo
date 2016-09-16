@@ -1,8 +1,7 @@
 # Authentication demo
 
-This is the example web application for demonstrating a simple authentication system. Most of ideas are adopted from
-[*Ruby on Rails Tutorial:
-Learn Web Development with Rails*](http://www.railstutorial.org/)
+This is the example web application for demonstrating a simple authentication system. I adopted a lot of ideas from
+[*Ruby on Rails Tutorial](http://www.railstutorial.org/)
 by [Michael Hartl](http://www.michaelhartl.com/).
 
 ---
@@ -47,4 +46,4 @@ By comparing hashed values instead of raw passwords, we will be able to authenti
 3. Compare the result to the hashed value stored in the database
 4. If the two match, then the submitted password is correct and the user is authenticated.
 
-https://www.railstutorial.org/book/modeling_users#sec-adding_a_secure_password
+[https://www.railstutorial.org/book/modeling_users#sec-adding_a_secure_password](https://www.railstutorial.org/book/modeling_users#sec-adding_a_secure_password)
