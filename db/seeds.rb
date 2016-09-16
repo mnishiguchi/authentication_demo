@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Registration.delete_all
+User.delete_all
+
+user = User.create!(name: "Example User", email: Faker::Internet.email)
+
+Registration.where(registrable: user)
+            .first_or_create!(password_digest: Faker::Internet.password,
+                              remember_digest: Faker::Internet.password)
