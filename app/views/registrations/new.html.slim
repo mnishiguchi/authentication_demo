@@ -1,0 +1,18 @@
+= provide(:title, "Sign up")
+
+.row
+  .col-sm-offset-3.col-sm-6
+
+    h2
+      | Sign up
+    = simple_form_for(@registration) do |f|
+      = f.error_notification
+      .form-inputs
+        = f.input :email
+        = f.input :password
+        = f.input :password_confirmation
+      .form-group
+        .btn-group
+          = f.button :submit, "Email me a link to sign in", class: "btn btn-primary outline signup_submit"
+
+    = link_to 'Back', users_path

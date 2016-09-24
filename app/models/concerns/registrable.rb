@@ -6,7 +6,6 @@ module Registrable
   extend ActiveSupport::Concern
 
   included do  # Instance methods
-
   end
 
   class_methods do

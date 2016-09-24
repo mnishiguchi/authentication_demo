@@ -8,8 +8,9 @@
 Registration.delete_all
 User.delete_all
 
-user = User.create!(name: "Example User", email: Faker::Internet.email)
+user = User.create!(name: "Example User")
 
-Registration.where(registrable: user)
-            .first_or_create!(password_digest: Faker::Internet.password,
-                              remember_digest: Faker::Internet.password)
+Registration.where(registrable: user).first_or_create!({
+    email: "user@example.com",
+    password_digest: "password"
+  })
